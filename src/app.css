@@ -1,0 +1,10 @@
+.boosLastTime {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgb(4, 197, 165);
+  color: #fff;
+  padding: 0 8px;
+  font-size: 14px;
+  border-radius: 0 0 0 4px;
+}

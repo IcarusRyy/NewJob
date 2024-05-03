@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "newJob",
+  "version": "1.0.0",
+  "description": "在boss Web端一眼查看哪些是新工作",
+  "icons": {},
+  "content_scripts": [
+    {
+      "js": [
+        "app.js"
+      ],
+      "matches": [
+        "https://www.zhipin.com/*"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "proxy.js",
+        "app.css"
+      ],
+      "matches": [
+        "https://www.zhipin.com/*"
+      ]
+    }
+  ],
+  "permissions": [
+    "webRequest",
+    "https://www.zhipin.com/*"
+  ]
+}

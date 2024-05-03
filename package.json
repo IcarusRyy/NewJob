@@ -1,0 +1,22 @@
+{
+  "name": "newJob",
+  "version": "1.0.0",
+  "description": "查看工作的最后改动时间",
+  "scripts": {
+    "build": "webpack --mode=production --config config/webpack.config.js"
+  },
+  "author": "apollo",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.1",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.10.0"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.11"
+  }
+}
