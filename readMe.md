@@ -17,3 +17,4 @@ chrome://extensions/
 
 扩展程序 => 加载已经解压的扩展程序 => 选中 clone 的项目 => 选择 build 文件夹 => 点击确定
 即可加载 new job 插件
+![Alt text](3571282ab9d235cd67c0759f0959df6.png)
