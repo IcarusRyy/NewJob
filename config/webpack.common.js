@@ -9,7 +9,7 @@ const common = {
     path: BuildPath,
     filename: "[name].js",
   },
-  devtool: "source-map",
+  // devtool: "source-map",
   stats: {
     all: false,
     errors: true,
