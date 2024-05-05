@@ -11,7 +11,8 @@
       ],
       "matches": [
         "https://www.zhipin.com/*",
-        "https://sou.zhaopin.com/*"
+        "https://sou.zhaopin.com/*",
+        "https://we.51job.com/*"
       ]
     }
   ],
@@ -23,7 +24,8 @@
       ],
       "matches": [
         "https://www.zhipin.com/*",
-        "https://sou.zhaopin.com/*"
+        "https://sou.zhaopin.com/*",
+        "https://we.51job.com/*"
       ]
     },
     {

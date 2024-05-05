@@ -1,5 +1,6 @@
 import { getBossJobListData } from "./plantFrom/boss/index.js"
 import { getZhiLianJobListData } from "./plantFrom/zhiLian/index.js"
+import { get51JobListData } from "./plantFrom/51job/index.js"
 import "./app.css"
 import { createLink, createScript } from "./help.js"
 ;(function initializeChromeExtension() {
@@ -30,6 +31,10 @@ import { createLink, createScript } from "./help.js"
     // 智联招聘接口
     if (responseURL.indexOf("/search/positions") !== -1) {
       getZhiLianJobListData(data?.response, true)
+    }
+    // 前程无忧接口
+    if (responseURL.indexOf("/job/search-pc") !== -1) {
+      get51JobListData(data?.response)
     }
   })
 })()

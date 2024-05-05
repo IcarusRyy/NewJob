@@ -1,7 +1,8 @@
 function isReqEnvironment(url) {
   return (
     url.startsWith("https://www.zhipin.com/wapi/zpgeek/search/joblist.json") ||
-    url.startsWith("https://fe-api.zhaopin.com/c/i/search/positions")
+    url.startsWith("https://fe-api.zhaopin.com/c/i/search/positions") ||
+    url.startsWith("https://we.51job.com/api/job/search-pc")
   )
 }
 // 对旧版浏览器 兼容自定义事件， 使用document.createEvent，并添加到window
@@ -73,11 +74,11 @@ function isReqEnvironment(url) {
         ajaxEventTrigger.call(this, "ajaxReadyStateChange")
         if (this.readyState === 4 && this.status === 200) {
           // 检查URL是否为目标URL
-          if (isReqEnvironment(this.responseURL + "")) {
+          if (isReqEnvironment((this.responseURL || this.url) + "")) {
             const data = {
               response: this.response,
               responseType: this.responseType,
-              responseURL: this.responseURL,
+              responseURL: this.responseURL || this.url,
               status: this.status,
               statusText: this.statusText,
               readyState: this.readyState,
