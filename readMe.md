@@ -21,6 +21,7 @@ chrome://extensions/
 # 非程序员的同学
 
 切换的 useBuild 分支 然后通过 zip 包下载，解压之后 直接使用 build 文件夹就好了。
+![Alt text](image.png)
 
 # 以下是 boss 和智联的效果图
 
