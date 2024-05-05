@@ -72,11 +72,8 @@ function isReqEnvironment(url) {
       function () {
         ajaxEventTrigger.call(this, "ajaxReadyStateChange")
         if (this.readyState === 4 && this.status === 200) {
-          console.log(this.responseURL, "this.responseURL")
-          console.log(isReqEnvironment(this.responseURL + ""), "测试")
           // 检查URL是否为目标URL
           if (isReqEnvironment(this.responseURL + "")) {
-            console.log("aaaa")
             const data = {
               response: this.response,
               responseType: this.responseType,
