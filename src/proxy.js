@@ -1,3 +1,9 @@
+function isReqEnvironment(url) {
+  return (
+    url.startsWith("https://www.zhipin.com/wapi/zpgeek/search/joblist.json") ||
+    url.startsWith("https://fe-api.zhaopin.com/c/i/search/positions")
+  )
+}
 // 对旧版浏览器 兼容自定义事件， 使用document.createEvent，并添加到window
 ;(function () {
   if (typeof window.CustomEvent !== "function") {
@@ -66,13 +72,11 @@
       function () {
         ajaxEventTrigger.call(this, "ajaxReadyStateChange")
         if (this.readyState === 4 && this.status === 200) {
+          console.log(this.responseURL, "this.responseURL")
+          console.log(isReqEnvironment(this.responseURL + ""), "测试")
           // 检查URL是否为目标URL
-          if (
-            this.responseURL.startsWith(
-              "https://www.zhipin.com/wapi/zpgeek/search/joblist.json" ||
-                "https://fe-api.zhaopin.com/c/i/search/positions"
-            )
-          ) {
+          if (isReqEnvironment(this.responseURL + "")) {
+            console.log("aaaa")
             const data = {
               response: this.response,
               responseType: this.responseType,

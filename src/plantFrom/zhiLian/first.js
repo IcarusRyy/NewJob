@@ -1,4 +1,4 @@
-import { createPublishTimeTag } from "./index"
+import { createPublishTimeTag, createZhiLianTagParentEle } from "./index"
 // 在页面第一次打开时处理职位列表
 ;(function firstOpenZhiLianPage() {
   const initialData = window.__INITIAL_STATE__ || {}
@@ -14,8 +14,12 @@ import { createPublishTimeTag } from "./index"
     )
 
     if (positionElement) {
-      const timeTag = createPublishTimeTag(item.firstPublishTime)
-      positionElement.appendChild(timeTag)
+      const parent = createZhiLianTagParentEle()
+      const firstPublishTag = createPublishTimeTag(item.firstPublishTime, true)
+      parent.appendChild(firstPublishTag)
+      const timeTag = createPublishTimeTag(item.publishTime)
+      parent.appendChild(timeTag)
+      positionElement.appendChild(parent)
     }
   })
 })()

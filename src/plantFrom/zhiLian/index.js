@@ -1,25 +1,38 @@
 import dayjs from "dayjs"
 
-export function createPublishTimeTag(publishTime) {
+export function createZhiLianTagParentEle() {
+  // 创建标签父元素
+  const tagParentEle = document.createElement("div")
+  tagParentEle.classList.add("zhiLianTagParent")
+  return tagParentEle
+}
+export function createPublishTimeTag(publishTime, first = false) {
   // 创建时间标签元素
   const timeTag = document.createElement("div")
-  timeTag.classList.add("zhiLianPublishTime")
 
   // 直接使用传入的时间字符串，因为它已经是所需的格式
   const now = dayjs()
   const differenceInDays = now.diff(publishTime, "day")
 
   // 根据时间差异设定背景颜色
-  let backgroundColor
+  let color
   if (differenceInDays <= 14) {
-    backgroundColor = "rgb(66, 110, 255)" // 两周以内
+    color = "rgb(66, 110, 255)" // 两周以内
   } else if (differenceInDays <= 45) {
-    backgroundColor = "#F0AD4E" // 两周至一个半月
+    color = "#F0AD4E" // 两周至一个半月
   } else {
-    backgroundColor = "red" // 超过一个半月
+    color = "red" // 超过一个半月
   }
-  timeTag.style.background = backgroundColor
-  timeTag.textContent = `最后发布时间：${publishTime}` // 设置时间文本内容
+  if (first) {
+    timeTag.style.marginRight = "20px"
+    timeTag.style.color = color
+    timeTag.style.fontWeight = 700
+  } else {
+    timeTag.style.background = color
+  }
+  timeTag.textContent = `${
+    first ? "首次发布时间" : "最后发布时间"
+  }：${publishTime}` // 设置时间文本内容
 
   return timeTag
 }
@@ -68,10 +81,13 @@ function waitUntilJobListRendered() {
 function updateJobListItemsWithTime(list, listItems) {
   listItems.forEach((listItem, index) => {
     const item = list[index]
-
     if (item && listItem) {
-      const timeTag = createPublishTimeTag(item.firstPublishTime)
-      listItem.appendChild(timeTag)
+      const parent = createZhiLianTagParentEle()
+      const firstPublishTag = createPublishTimeTag(item.firstPublishTime, true)
+      parent.appendChild(firstPublishTag)
+      const timeTag = createPublishTimeTag(item.publishTime)
+      parent.appendChild(timeTag)
+      listItem.appendChild(parent)
     }
   })
 }
