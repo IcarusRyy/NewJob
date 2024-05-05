@@ -33,7 +33,9 @@ export function createPublishTimeTag(publishTime, first = false) {
   timeTag.textContent = `${
     first ? "首次发布时间" : "最后发布时间"
   }：${publishTime}` // 设置时间文本内容
-
+  if (!first) {
+    timeTag.textContent += `(已经过去了${differenceInDays}天)`
+  }
   return timeTag
 }
 
