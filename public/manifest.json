@@ -10,7 +10,8 @@
         "app.js"
       ],
       "matches": [
-        "https://www.zhipin.com/*"
+        "https://www.zhipin.com/*",
+        "https://sou.zhaopin.com/*"
       ]
     }
   ],
@@ -21,12 +22,22 @@
         "app.css"
       ],
       "matches": [
-        "https://www.zhipin.com/*"
+        "https://www.zhipin.com/*",
+        "https://sou.zhaopin.com/*"
+      ]
+    },
+    {
+      "resources": [
+        "first.js"
+      ],
+      "matches": [
+        "https://sou.zhaopin.com/*"
       ]
     }
   ],
   "permissions": [
     "webRequest",
-    "https://www.zhipin.com/*"
+    "https://www.zhipin.com/*",
+    "https://sou.zhaopin.com/*"
   ]
 }

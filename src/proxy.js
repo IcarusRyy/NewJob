@@ -69,7 +69,8 @@
           // 检查URL是否为目标URL
           if (
             this.responseURL.startsWith(
-              "https://www.zhipin.com/wapi/zpgeek/search/joblist.json"
+              "https://www.zhipin.com/wapi/zpgeek/search/joblist.json" ||
+                "https://fe-api.zhaopin.com/c/i/search/positions"
             )
           ) {
             const data = {

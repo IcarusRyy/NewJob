@@ -8,6 +8,7 @@ const config = merge(common, {
   entry: {
     app: SrcPath + "/app.js",
     proxy: SrcPath + "/proxy.js",
+    first: SrcPath + "/plantFrom/zhiLian/first.js",
   },
 })
 
