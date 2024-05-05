@@ -68,6 +68,9 @@ function createLastModifyTimeTag(timeStamp) {
     timeTag.style.background = "red" // 红色，超过一个半月
   }
 
-  timeTag.textContent = timeString
+  // 计算已经过去的时间
+  const dayPassed = dayjs().diff(modifyTime, 'day');
+
+  timeTag.textContent = `${timeString}(已经过去了${dayPassed}天)`
   return timeTag
 }
