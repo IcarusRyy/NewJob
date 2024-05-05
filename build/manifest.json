@@ -36,8 +36,6 @@
     }
   ],
   "permissions": [
-    "webRequest",
-    "https://www.zhipin.com/*",
-    "https://sou.zhaopin.com/*"
+    "webRequest"
   ]
 }
