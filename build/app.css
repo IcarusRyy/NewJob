@@ -18,4 +18,14 @@
   border-radius: 0 0 0 4px;
   display: flex;
 }
+.jobUpdateDateTimeTag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgb(255, 108, 44);
+  color: #fff;
+  padding: 0 8px;
+  font-size: 14px;
+  border-radius: 0 0 0 4px;
+}
 
