@@ -1,13 +1,11 @@
 import dayjs from "dayjs"
 
-export function getBossJobListData(responseText) {
+export async function getBossJobListData(responseText) {
   try {
     const data = JSON.parse(responseText)
-    waitUntilJobListRendered().then((jobListContainer) => {
-      if (data && data.zpData && data.zpData.jobList) {
-        updateJobListItemsWithTime(data.zpData.jobList, jobListContainer)
-      }
-    })
+    const jobList = data?.zpData?.jobList || []
+    const jobListContainer = await waitUntilJobListRendered()
+    jobList.length && updateJobListItemsWithTime(jobList, jobListContainer)
   } catch (err) {
     console.error("reason：", err)
   }
