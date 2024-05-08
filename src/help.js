@@ -1,5 +1,5 @@
 export function createScript(src) {
-  return Object.assign(document.createElement("script"), { src })
+  return Object.assign(document.createElement("script"), { src, defer: true })
 }
 
 export function createLink(href) {
