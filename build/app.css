@@ -8,7 +8,8 @@
   font-size: 14px;
   border-radius: 0 0 0 4px;
 }
-.zhiLianTagParent {
+.zhiLianTagParent,
+.lagouTagParent {
   position: absolute;
   right: 0;
   top: 0;

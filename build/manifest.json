@@ -12,7 +12,8 @@
       "matches": [
         "https://www.zhipin.com/*",
         "https://sou.zhaopin.com/*",
-        "https://we.51job.com/*"
+        "https://we.51job.com/*",
+        "https://www.lagou.com/*"
       ]
     }
   ],
@@ -25,7 +26,8 @@
       "matches": [
         "https://www.zhipin.com/*",
         "https://sou.zhaopin.com/*",
-        "https://we.51job.com/*"
+        "https://we.51job.com/*",
+        "https://www.lagou.com/*"
       ]
     },
     {
@@ -34,6 +36,14 @@
       ],
       "matches": [
         "https://sou.zhaopin.com/*"
+      ]
+    },
+    {
+      "resources": [
+        "open.js"
+      ],
+      "matches": [
+        "https://www.lagou.com/*"
       ]
     }
   ],
