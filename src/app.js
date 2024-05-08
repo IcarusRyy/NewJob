@@ -1,4 +1,4 @@
-import { getBossJobListData } from "./plantFrom/boss/index.js"
+// import { getBossJobListData } from "./plantFrom/boss/index.js"
 import { getZhiLianJobListData } from "./plantFrom/zhiLian/index.js"
 import { get51JobListData } from "./plantFrom/51job/index.js"
 import { getLagouJobListData } from "./plantFrom/lagou/index.js"
@@ -32,9 +32,9 @@ import { createLink, createScript } from "./help.js"
     if (!data) return
     const responseURL = data?.responseURL
     // boss 直聘接口
-    if (responseURL.indexOf("/search/joblist.json") !== -1) {
-      getBossJobListData(data?.response)
-    }
+    // if (responseURL.indexOf("/search/joblist.json") !== -1) {
+    //   getBossJobListData(data?.response)
+    // }
     // 智联招聘接口
     if (responseURL.indexOf("/search/positions") !== -1) {
       getZhiLianJobListData(data?.response, true)

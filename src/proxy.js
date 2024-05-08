@@ -1,6 +1,6 @@
 function isReqEnvironment(url) {
   return (
-    url.startsWith("https://www.zhipin.com/wapi/zpgeek/search/joblist.json") ||
+    // url.startsWith("https://www.zhipin.com/wapi/zpgeek/search/joblist.json") ||
     url.startsWith("https://fe-api.zhaopin.com/c/i/search/positions") ||
     url.startsWith("https://we.51job.com/api/job/search-pc") ||
     url.startsWith("https://www.lagou.com/jobs/v2/positionAjax.json")
