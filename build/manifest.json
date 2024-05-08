@@ -10,7 +10,6 @@
         "app.js"
       ],
       "matches": [
-        "https://www.zhipin.com/*",
         "https://sou.zhaopin.com/*",
         "https://we.51job.com/*",
         "https://www.lagou.com/*"
@@ -24,7 +23,6 @@
         "app.css"
       ],
       "matches": [
-        "https://www.zhipin.com/*",
         "https://sou.zhaopin.com/*",
         "https://we.51job.com/*",
         "https://www.lagou.com/*"
