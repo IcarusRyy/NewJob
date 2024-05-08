@@ -23,7 +23,8 @@ chrome://extensions/
 切换的 useBuild 分支 然后通过 zip 包下载，解压之后 直接使用 build 文件夹就好了。
 ![Alt text](image.png)
 
-# 以下是 boss 和智联的效果图
+# 以下是 智联 拉钩的效果图 （boss 暂时 G 了 ）
 
 ![Alt text](3571282ab9d235cd67c0759f0959df6.png)
 ![Alt text](d6e06eca5a87706747384ce2d1ea20e.png)
+![Alt text](image-1.png)
