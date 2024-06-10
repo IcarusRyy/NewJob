@@ -10,7 +10,7 @@ import { createPublishTimeTag, createZhiLianTagParentEle } from "./index"
   positionList.forEach((item, index) => {
     // 获取职位对应的DOM元素
     const positionElement = document.querySelector(
-      `.positionlist > *:nth-child(${index + 1})`
+      `.positionlist__list > *:nth-child(${index + 1})`
     )
 
     if (positionElement) {
